@@ -32,28 +32,44 @@
 .screen {
     background-color: rgb(177, 174, 174);
     height: 6rem;
-    width: 97%;
+    width: 89%;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 5px 5px;
+    margin-top: 9px;
+    margin-left: 17px;
 }
 
 .numbers-container {
     border: 2px solid purple;
     border-radius: 10px;
     height: 300px;
-    height: 400px;
-    width: 300px;
+    height: 450px;
+    width: 330px;
+    margin-left: 28px;
     margin-top: 20px;
-    margin-left: 40px;
+    margin-bottom: 15px;
     background-color: rgb(177, 174, 174);
 }
 
-button {
+button,
+.number {
     cursor: pointer;
-    height: 30px;
-    margin: 5px 5px;
+    height: 50px;
+    width: 60px;
+    margin: 6px 5px;
     background-color: black;
     color: white;
     border-radius: 50px;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.number {
+    margin-left: 11px;
+}
+
+.clear,
+.delete {
+    width: 150px;
+    font-size: 20px;
 }
