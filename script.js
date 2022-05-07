@@ -1,3 +1,6 @@
+let currentNum = "";
+let previousNum = "";
+let operator = "";
 
 //basic equation functions
 function addition(num1, num2) {
@@ -34,14 +37,19 @@ function operate(operator, num1, num2) {
     }
 }
 
-
+// On button click
 function buttonPress() {
     const button = document.getElementsByClassName('btn');
     for (let i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', test);
+        button[i].addEventListener('click', displayNumbers);
     }
 }
 
+function updateDisplay() {
+    const display = document.querySelector('.screen')
+
+}
 
 buttonPress()
+
 

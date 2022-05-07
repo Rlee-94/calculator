@@ -1,80 +1,51 @@
 * {
     box-sizing: border-box;
-    background-color: darksalmon
-}
-
-
-
-.header {
-    text-align: center;
-    font-size: 40px;
-    font-family: fantasy;
-}
-
-.container {
-    margin-top: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 .calculator {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
     border: 7px solid black;
     border-radius: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 500px;
     background-color: dimgray;
 }
 
-.screen {
-    background-color: rgb(177, 174, 174);
-    height: 6rem;
-    width: 343px;
-    border: 3px solid black;
-    border-radius: 10px;
-    margin-top: 9px;
-    margin-left: 19px;
-}
-
-.numbers-container {
-    border: 3px solid rgb(0, 0, 0);
-    border-radius: 10px;
-    height: 300px;
-    height: 330px;
-    width: 330px;
-    margin-left: 28px;
-    margin-top: 20px;
-    margin-bottom: 15px;
-    background-color: rgb(177, 174, 174);
-}
-
-button,
-.number {
+.calculator>button {
     cursor: pointer;
-    height: 50px;
-    width: 60px;
-    margin: 6px 5px;
-    background-color: black;
-    color: rgba(255, 255, 255, 0.861);
-    border-radius: 50px;
-    padding: 5px 5px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    border: 1px solid rgb(0, 0, 0);
+    outline: none;
 }
 
-button:hover {
-    transform: scale(1.05);
+.calculator>button:hover {
+    transform: scale(1.1);
+
 }
 
-.number {
-    margin-left: 11px;
-    font-size: 20px;
+.screen {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.clear,
-.delete {
-    width: 150px;
-    font-size: 20px;
+.screen .display-before {
+    color: rgb(14, 179, 52);
+    font-size: 1.5rem;
+}
+
+.screen .display-after {
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
 }
