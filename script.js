@@ -34,3 +34,14 @@ function operate(operator, num1, num2) {
     }
 }
 
+
+function buttonPress() {
+    const button = document.getElementsByClassName('btn');
+    for (let i = 0; i < button.length; i++) {
+        button[i].addEventListener('click', test);
+    }
+}
+
+
+buttonPress()
+

@@ -25,25 +25,25 @@
     display: flex;
     flex-wrap: wrap;
     width: 400px;
-    height: 600px;
+    height: 500px;
     background-color: dimgray;
 }
 
 .screen {
     background-color: rgb(177, 174, 174);
     height: 6rem;
-    width: 89%;
-    border: 1px solid black;
+    width: 343px;
+    border: 3px solid black;
     border-radius: 10px;
     margin-top: 9px;
-    margin-left: 17px;
+    margin-left: 19px;
 }
 
 .numbers-container {
-    border: 2px solid purple;
+    border: 3px solid rgb(0, 0, 0);
     border-radius: 10px;
     height: 300px;
-    height: 450px;
+    height: 330px;
     width: 330px;
     margin-left: 28px;
     margin-top: 20px;
@@ -58,14 +58,19 @@ button,
     width: 60px;
     margin: 6px 5px;
     background-color: black;
-    color: white;
+    color: rgba(255, 255, 255, 0.861);
     border-radius: 50px;
     padding: 5px 5px;
     font-family: 'Roboto', sans-serif;
 }
 
+button:hover {
+    transform: scale(1.05);
+}
+
 .number {
     margin-left: 11px;
+    font-size: 20px;
 }
 
 .clear,
