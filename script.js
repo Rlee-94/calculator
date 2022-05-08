@@ -1,55 +1,55 @@
-let currentNum = "";
-let previousNum = "";
-let operator = "";
+class Calculator {
+    constructor(previousOperandTextElement, currentOperandTextElement) {
+        this.previousOperandTextElement = previousOperandTextElement
+        this.currentOperandTextElement = currentOperandTextElement
+        this.clear()
+    }
 
-//basic equation functions
-function addition(num1, num2) {
-    return Number(num1) + Number(num2)
-}
+    clear() {
+        this.currentOperand = ''
+        this.previousOperand = ''
+        this.operation = undefined
+    }
 
-function subtract(num1, num2) {
-    return Number(num1) - Number(num2)
-}
+    delete() {
 
-function multiply(num1, num2) {
-    return Number(num1) * Number(num2)
-}
+    }
 
-function divide(num1, num2) {
-    return Number(num1) / Number(num2)
-}
+    appendNumber(number) {
+        this.currentOperand = number
+    }
 
-function operate(operator, num1, num2) {
-    num1 = Number(num1)
-    num2 = Number(num2)
-    switch (operator) {
-        case '+':
-            return add(num1, num2)
-        case '-':
-            return substract(num1, num2)
-        case '*':
-            return multiply(num1, num2)
-        case '÷':
-            if (num2 === 0) return null
-            else return divide(num1, num2)
-        default:
-            return null
+    chooseOperation(operation) {
+
+    }
+
+    compute() {
+
+    }
+
+    updateDisplay() {
+        this.currentOperandTextElement.innerText = this.currentOperand
     }
 }
 
-// On button click
-function buttonPress() {
-    const button = document.getElementsByClassName('btn');
-    for (let i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', displayNumbers);
-    }
-}
 
-function updateDisplay() {
-    const display = document.querySelector('.screen')
+const numberButtons = document.querySelectorAll('[data-number]')
+const operationButtons = document.querySelectorAll('[data-operation]')
+const equalsButton = document.querySelector('[data-equals]')
+const deleteButton = document.querySelector('[data-delete]')
+const allClearButton = document.querySelector('[data-all-clear]')
+const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+const currentOperandTextElement = document.querySelector('[data-current-operand]')
 
-}
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-buttonPress()
+numberButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.appendNumber(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+
 
 
